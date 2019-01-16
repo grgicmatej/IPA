@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <?php include_once "bootstrap_link.php" ?>
+        <?php include_once "bootstrap/bootstrap_link.php" ?>
         <title>Zadaca 01_02</title>
     </head>
     <body>
@@ -17,6 +17,6 @@
             <li><a href="stranica4.php">4. stranica</a></li>
             <li><a href="stranica5.php">5. stranica</a></li>
         </ul> 
-        <?php include_once "bootstrap_script.php" ?>
+        <?php include_once "bootstrap/bootstrap_script.php" ?>
     </body>
 </html>

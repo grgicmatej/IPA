@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include_once "skeleton_head.php"; ?>
+    <?php include_once "skeleton/skeleton_head.php"; ?>
   </head>
   <body>
     <div class="container">
