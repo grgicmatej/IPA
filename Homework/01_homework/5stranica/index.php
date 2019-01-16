@@ -16,5 +16,27 @@
             <li><a href="stranica4.php">4. stranica</a></li>
             <li><a href="stranica5.php">5. stranica</a></li>
         </ul>
+        <div>
+            <h1>Operatori 1-6</h1>
+            <?php
+                $b="<br />";
+                $x=10;
+                $y=2;
+                echo "x je $x".$b;
+                echo "y je $y".$b;
+                echo 'varijabla $z ce biti rezultat'.$b.$b;
+                echo '      1-   Zbrajanje $z=$x+$y: '. $z=$x+$y;
+                echo $b;
+                echo '      2-   Oduzimanje $z=$x-$y: '. $z=$x-$y;
+                echo $b;
+                echo '      3-   Mnozenje $z=$x*$y: '. $z=$x*$y;
+                echo $b;
+                echo '      4-   Djeljenje $z=$x/$y: '. $z=$x/$y;
+                echo $b;
+                echo '      5-   Modulo $z=$x%$y: '. $z=$x%$y;
+                echo $b;
+                echo '      6-   Potencije $z=$x**$y: '. $z=$x**$y;
+            ?>
+        </div>
     </body>
 </html>
