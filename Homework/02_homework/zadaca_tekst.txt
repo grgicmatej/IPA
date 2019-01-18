@@ -1,0 +1,8 @@
+- Kreirati gihub repozitorij InchooPHPAkademijaZ2. 
+- Kreirati stranicu koja za putem $_POST parametra prima niz brojeva odvojenih zarezom (napraviti html stranicu s formom). 
+- Stranica ispisuje sve primljene parne brojeve od najmanjeg prema najveæem 
+- Oznaèi podebljano prvi veæi parni broj od aritmetièke sredine svih primljenih parnih brojeva. 
+- Brojevi se ispisuju u kvadratnoj tablici koja je dimenzija drugog korijena najveæeg primljenog broja +1 na naèin 
+	da se prikažu samo oni brojevi koji odgovaraju kriterijima ispisa brojeva, 
+- ostale æelije slijedno lijevo prema desno parametra gore prema dolje ostaju prazna. 
+- Stranicu postaviti na polazniknn.inchoo4u.net/Z2
