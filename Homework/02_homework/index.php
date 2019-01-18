@@ -9,7 +9,7 @@
                 <h1>Tablica</h1><br>     
                 <div class="center">
                     <form action="setup.php" method="GET"> <!-- Ovo poslije prebaci na index.php kad includas setup.php dolje-->
-                        <input class= "formstil" type="text" id="broj" placeholder="Upisi brojeve" name="broj">
+                        <input class= "formstil" type="text" placeholder="Upisi brojeve" name="broj">
                         <button class="formbutton" type="submit">Posalji</button>
                     </form>
                 </div>
