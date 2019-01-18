@@ -11,7 +11,7 @@ td{
 
 </style>
 <?php
-$y=0;       // $y predstavlja 0, ti brojevi će se ispisivati
+$y=0;       // $y pocinje s 0, ti brojevi će se ispisivati
 $x = isset($_GET["x"]) ? $_GET["x"] : 15;   // x će predstavljati (korijen iz x zaokružen na prvi idući cijeli broj)^2 = To je najveći broj u nizu i do njega se ispisuje
 echo "<table>";         // Otvara tablicu
 for($i=0;$i<=$x;$i++){  // Ovo određuje broj redova, umjesto $i<=$x treba biti $KORIJEN - određuje broj redova
