@@ -7,6 +7,7 @@
 .formstil{
     width:100%;
     text-align: center;
+    border-radius: 1cm;
     }
 .formbutton{
     vertical-align: middle;
@@ -14,8 +15,9 @@
     background-color: dodgerblue;
     border: 1px solid #ddd;
     color: white;
+    border-radius: 1cm;
   }
 .formbutton:hover {
     background-color: royalblue;
+    border-radius: 1cm;
   }
- 
