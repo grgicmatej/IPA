@@ -1,0 +1,21 @@
+
+.center{    
+    margin-top: 1cm;
+    margin: 0 auto; 
+    width:50%;
+}
+.formstil{
+    width:100%;
+    text-align: center;
+    }
+.formbutton{
+    vertical-align: middle;
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+  }
+.formbutton:hover {
+    background-color: royalblue;
+  }
+ 
