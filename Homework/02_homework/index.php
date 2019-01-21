@@ -9,7 +9,7 @@
                 <h1>Tablica</h1><br>     
                 <div class="center">
                     <form action="index.php" method="POST"> 
-                        <input class= "formstil" type="text" placeholder="Upisi brojeve" name="broj[]">
+                        <input class= "formstil" type="text" placeholder="Upisi brojeve" name="broj">
                         <button class="formbutton" type="submit">Posalji</button>
                     </form><br>
                 </div>

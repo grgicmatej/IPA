@@ -20,4 +20,5 @@
 .formbutton:hover {
     background-color: royalblue;
     border-radius: 1cm;
+    border-color: pink;
   }
