@@ -1,14 +1,13 @@
 <style>
 table{
     border-collapse: collapse;
-    
 }
 table,tr,td{
     border: 5px solid blue;
     height: 3em;
     width: 3em auto;
     border-color: #3E8FFE;
-    }
+}
 td{
     text-align: right;
 }
