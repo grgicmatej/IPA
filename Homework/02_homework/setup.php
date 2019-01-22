@@ -28,16 +28,28 @@ if(!isset($_POST['broj'])){
             continue;
         }
     }
+    if (empty($niz)) {  // Provjerava ima li barem jedna ispravna vrijednost u nizu
+        exit;
+        }
     sort($niz, SORT_NUMERIC);
     $korijen=sqrt($najvecibroj);
-    $zaokruzeno=$korijen;
-    //$zaokruzeno=(intval($korijen))+1;
+    $korijenCijeli = floor($korijen);
+    if($korijen===$korijenCijeli){   // Provjerava je li potrebno cijelom korijenu dodati 1
+        $zaokruzeno=$korijen;
+        }else{
+            $zaokruzeno=++$korijenCijeli;
+        }
     $maxbroj=pow($zaokruzeno,2);
     $sredina = array_sum($niz) / count($niz);
     $niz = array_values(array_diff($niz, $numsToExclude));
     $niz = array_unique($niz);
     sort($niz);
     echo "<br/>";
+    echo "Upisani  brojevi: ";
+    var_dump($pocetniniz);
+    echo "<br/>";
+    echo "<br/>";
+
     $najblizibroj = null;
     foreach ($niz as $key => $value) {
         if ($value >= $sredina && $value % 2 === 0) {
