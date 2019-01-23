@@ -31,18 +31,18 @@ function niz($x, $y, &$a)
 }   // Zatvara funkciju
   
 // Tablica test
-$x = 5; 
-$y = 3; 
+$x = isset($_GET['red']) ? $_GET['red']: 0; 
+$y = isset($_GET['stupac']) ? $_GET['stupac']: 0; 
 niz($x, $y, $a); 
 echo "<table>";
     for ($i = 0; $i < $x; $i++) {
     echo "<tr>";
     for ($j = 0; $j < $y; $j++) { 
-        echo "<td>"; 
-        echo ($a[$i][$j]); 
-        echo "</td>"; 
+        echo "<td><div class='divdiv'>"; 
+            echo ($a[$i][$j]);
+        echo "</div></td>"; 
     } 
     echo "</tr>";
-} 
-     
+}
 ?> 
+

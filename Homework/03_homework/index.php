@@ -15,12 +15,12 @@
           <main>
 		        <section id="unos">
 		        	<header><h1>Input</h1></header>
-			        <form method="post">
+			        <form method="get" action="index.php">
                 <label for="red"><p class="unostekst">Broj redaka</p></label>
-                <input type="number" class="unos" id="red" min="1" value="5"/>
+                <input type="number" class="unos" name="red" id="red" min="1" value="<?php echo $_GET['red'] ?>"/>
                 <label for="stupac"><p class="unostekst">Broj stupaca</p></label>
-                <input type="number" class="unos" id="stupac" min="1" value="5"/>
-                <input type="button" id="kreiraj" value="Kreiraj tablicu"/>
+                <input type="number" class="unos" name="stupac" id="stupac" min="1" value="<?php echo $_GET['stupac'] ?>"/>
+                <input type="submit" id="kreiraj" value="Kreiraj tablicu"/>
               </form>
 		        </section>
 		        <section id="prikaz">
