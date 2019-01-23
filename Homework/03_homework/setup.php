@@ -1,5 +1,4 @@
 <?php 
-
 //$x = broj redova
 //$y = broj stupaca
 //$a = niz s brojevima za ispis
@@ -26,13 +25,15 @@ function niz($x, $y, &$a)
                 $a[$i][$minS] = $val++; 
                 $minS++; 
                 } 
-
     }   // Zatvara while
 }   // Zatvara funkciju
   
-// Tablica test
+// Tablica
 $x = isset($_GET['red']) ? $_GET['red']: 0; 
 $y = isset($_GET['stupac']) ? $_GET['stupac']: 0; 
+if($x<1 || $y<1){
+    return "Parametar ne smije biti 0!";
+}
 niz($x, $y, $a); 
 echo "<table>";
     for ($i = 0; $i < $x; $i++) {
@@ -45,4 +46,3 @@ echo "<table>";
     echo "</tr>";
 }
 ?> 
-

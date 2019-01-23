@@ -20,6 +20,7 @@ section#unos {
     border-width: 2px;
     font-size: 15px;
 }
+
 .unos:focus{
     border-radius: 10px;
     background: #535355;
@@ -29,8 +30,9 @@ section#unos {
     border-width: 2px;
     font-size: 15px;
 }
+
 .unostekst{
-    color: #535355;
+    color: white;
     font-size: 16px;
     margin-bottom: 0 px;
     
@@ -125,12 +127,6 @@ td {
 	text-align: center;
 	background: #ddd;
 	border-spacing: 0cm;
-	
 	border-radius:10px;
 	background: #3F3F41;;
-}
-
-
-header { 
-	
 }
