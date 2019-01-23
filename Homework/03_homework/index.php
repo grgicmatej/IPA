@@ -2,6 +2,7 @@
 
 //$x = broj redova
 //$y = broj stupaca
+//$a = niz s brojevima za ispis
 function niz($x, $y, &$a) 
 { 
     $val = 1;   // Prvi broj
@@ -9,11 +10,10 @@ function niz($x, $y, &$a)
     $minS = 0;  // Najmanji stupac
     
     while ($minR < $x && $minS < $y ){ 
-        
-        for ($i = $minS; $i < $y; ++$i){ // Print prvog reda od preostalih redova od (lijevo prema desno)
+        for ($i = $minS; $i < $y; ++$i)//{ // Print prvog reda od preostalih redova od (lijevo prema desno)
             $a[$minR][$i] = $val++; 
             $minR++; 
-            for ($i = $minR; $i < $x; ++$i){ // Print zadnjeg stupca od preostalih(skroz desni)
+            for ($i = $minR; $i < $x; ++$i)//{ // Print zadnjeg stupca od preostalih(skroz desni)
                 $a[$i][$y - 1] = $val++; 
                 $y--;    
                 if ($minR < $x){ // Print zadnjeg reda od preostalih redova (desno prema lijevo)
@@ -26,8 +26,7 @@ function niz($x, $y, &$a)
                 $a[$i][$minS] = $val++; 
                 $minS++; 
                 } 
-            }   // Zatvara unutarnji for
-        }   // Zatvara vanjski for
+
     }   // Zatvara while
 }   // Zatvara funkciju
   
