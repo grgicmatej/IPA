@@ -11,6 +11,21 @@ section#unos {
 	float: left;
 }
 
+.unos{
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    background-color: #535355;
+    border-width: 2px;
+    font-size: 15px;
+}
+.unostekst{
+    color: white;
+    font-size: 16px;
+    margin-bottom: 0 px;
+    
+}
+
 section#prikaz {
 	width: 55%;
 	float: right;
@@ -71,10 +86,12 @@ input:focus {
 	color: #ffffff;
 	font-weight: bold;
 	text-transform: uppercase;
-	display: block;
+	height: 1.8cm;
     cursor: pointer;
-    width: 170%;
+    width: 200%;
     border-radius: 10px;
+    padding-top: -1cm;
+    padding-bottom: 1cm;            // UREĐIVANJE TEKSTA U SREDINI BOXa
 }
 	
 #tablica {
