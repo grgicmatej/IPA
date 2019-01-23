@@ -1,0 +1,99 @@
+body  {
+	background: #3F3F41;
+}
+
+main {
+	width: 100%;
+}
+
+section#unos {
+	width: 20%;
+	float: left;
+}
+
+section#prikaz {
+	width: 55%;
+	float: right;
+}
+
+header {
+	width: 300px;
+	color: #4e5563;
+	border-bottom: 2px solid #4e5563;
+	margin: 20px;
+	padding: 10px 0px;
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: bold;
+	font-family: "Arial Black", Gadget, sans-serif;
+	text-transform: uppercase;
+}
+
+form {
+	outline: 0;
+	margin: 10px;
+	padding: 10px;
+	font-size: 24px;
+}
+
+label {
+	display: block;
+	color: #919191;
+	font-family: "Arial", Gadget, sans-serif;
+}
+
+input {
+	color: #7aabe7;
+	width: 75%;
+	height: 75px;
+	border:none;
+	vertical-align: middle;
+	line-height: 75px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px 0px 40px 0px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	behavior: url(skripte/pie.min.htc);
+}
+
+input:focus {
+	outline: 0;
+}
+
+#kreiraj {
+	background-color: #7aabe7;
+	color: #ffffff;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+    cursor: pointer;
+    width: 100%;
+}
+	
+#tablica {
+	position: absolute;
+	margin: 20px;
+	padding: 10px 0px;
+	color: #888888;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.polje {
+	position:absolute;
+	width: 90px;
+	height: 90px;
+	background: #ffffff; 
+	text-align:center;
+	vertical-align: middle;
+	line-height: 90px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	behavior: url(skripte/pie.min.htc);
+}
