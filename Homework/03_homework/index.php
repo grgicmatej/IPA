@@ -17,9 +17,9 @@
 		        	<header><h1>Input</h1></header>
 			        <form method="post">
                 <label for="red"><p class="unostekst">Broj redaka</p></label>
-                <input type="number" class="unos" id="red" min="1" max="10" value="5"/>
+                <input type="number" class="unos" id="red" min="1" value="5"/>
                 <label for="stupac"><p class="unostekst">Broj stupaca</p></label>
-                <input type="number" class="unos" id="stupac" min="1" max="10" value="5"/>
+                <input type="number" class="unos" id="stupac" min="1" value="5"/>
                 <input type="button" id="kreiraj" value="Kreiraj tablicu"/>
               </form>
 		        </section>
