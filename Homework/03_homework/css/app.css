@@ -42,11 +42,12 @@ section#prikaz {
 }
 
 header {
+	display:block;
 	width: 300px;
 	color: #4e5563;
-	border-bottom: 2px solid #4e5563;
 	margin: 20px;
 	padding: 10px 0px;
+	text-align: left;
 }
 
 h1 {
@@ -127,4 +128,9 @@ td {
 	
 	border-radius:10px;
 	background: #3F3F41;;
+}
+
+
+header { 
+	
 }
