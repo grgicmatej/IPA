@@ -5,35 +5,38 @@
   </head>
   <body>
   <div class="grid-container">
-      <div class="grid-x">
-        <div class="large-2 cell"></div>
-        
-        <div class="large-12 cell">
-          <table>
-          <caption>Pregled zaposlenika</caption>
-            <tr>
-              <th>Ime zaposlenika</th>
-              <th>Prezime zaposlenika</th>
-              <th>Datum rođenja</th>
-              <th>Spol</th>
-              <th>iznos mjesečnih primanja</th>
-            </tr>
-            <tr>
-              <td>Testni1</td>
-              <td>Prezimeni1</td> 
-              <td>1.1.2000</td>
-              <td>Muški</td>
-              <td>5000.50</td>
-            </tr>
-            <tr>
-              <td>Testni1</td>
-              <td>Prezimeni1</td> 
-              <td>1.1.2000</td>
-              <td>Muški</td>
-              <td>5000.50</td>
-            </tr>
-          </table>
-        </div>
+      <div class="grid-x padding-x">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <ul class="dropdown menu" data-dropdown-menu>   
+            <li><a href="index.php?menu=1">Pregled zaposlenika</a></li>
+            <li><a href='index.php?menu=2'>Unos novog zaposlenika</a></li>
+            <li><a href='index.php?menu=3'>Promjena podataka postojećem zaposleniku</a></li>      
+            <li><a href='index.php?menu=4'>Brisanje zaposlenika</a></li>            
+            <li>
+              <a href="#0">Statistika</a>
+                <ul class="menu">
+                  <li><a href="index.php?menu=5">Ukupna starost</a></li>
+                  <li><a href="index.php?menu=6">Prosječna starost</a></li>
+                  <li><a href="index.php?menu=7">Ukupna primanja</a></li>
+                  <li><a href="index.php?menu=8">Prosječna primanja</a></li>
+                </ul>
+            </li>                          
+          </ul>
+        </ul>
+
+        <?php                                                                            
+          if (!isset($_GET['menu']) || $_GET['menu'] == 1) { include("pregled.php"); } // Pregled zaposlenika
+          else if ($_GET['menu'] == "2") { include("unosnovog.php"); }        // Unos novog zaposlenika
+          else if ($_GET['menu'] == "3") { include("Promjena.php"); }         // Promjena podataka
+          else if ($_GET['menu'] == "4") { include("Brisanje.php"); }         // Brisanje zaposlenika
+          else if ($_GET['menu'] == "5") { include("starost.php"); }          // Statistika starost
+          else if ($_GET['menu'] == "6") { include("prosjecnastarost.php"); } // Statistika prosjecna starost
+          else if ($_GET['menu'] == "7") { include("primanja.php"); }         // Statistika primanja
+          else if ($_GET['menu'] == "8") { include("prosjecnaprimanja.php"); }// Statistika primanja
+        ?>                                                              
+        <footer>  
+          <?php include_once "podnozje.php"; ?>
+        </footer>
       </div>
     </div>
     <?php include_once "skripte.php" ?>
