@@ -6,6 +6,7 @@
   <body>
   <div class="grid-container">
       <div class="grid-x padding-x">
+        <div class="uredenje">
         <ul class="dropdown menu" data-dropdown-menu>
           <ul class="dropdown menu" data-dropdown-menu>   
             <li><a href="index.php?menu=1">Pregled zaposlenika</a></li>
@@ -23,22 +24,22 @@
             </li>                          
           </ul>
         </ul>
-
-        <?php                                                                            
-          if (!isset($_GET['menu']) || $_GET['menu'] == 1) { include("pregled.php"); } // Pregled zaposlenika
-          else if ($_GET['menu'] == "2") { include("unosnovog.php"); }        // Unos novog zaposlenika
-          else if ($_GET['menu'] == "3") { include("Promjena.php"); }         // Promjena podataka
-          else if ($_GET['menu'] == "4") { include("Brisanje.php"); }         // Brisanje zaposlenika
-          else if ($_GET['menu'] == "5") { include("starost.php"); }          // Statistika starost
-          else if ($_GET['menu'] == "6") { include("prosjecnastarost.php"); } // Statistika prosjecna starost
-          else if ($_GET['menu'] == "7") { include("primanja.php"); }         // Statistika primanja
-          else if ($_GET['menu'] == "8") { include("prosjecnaprimanja.php"); }// Statistika primanja
-        ?>                                                              
-        <footer>  
-          <?php include_once "podnozje.php"; ?>
-        </footer>
+        </div>
+      <?php                                                                            
+        if (!isset($_GET['menu']) || $_GET['menu'] == 1) { include("pregled.php"); } // Pregled zaposlenika
+        else if ($_GET['menu'] == "2") { include("unosnovog.php"); }        // Unos novog zaposlenika
+        else if ($_GET['menu'] == "3") { include("Promjena.php"); }         // Promjena podataka
+        else if ($_GET['menu'] == "4") { include("Brisanje.php"); }         // Brisanje zaposlenika
+        else if ($_GET['menu'] == "5") { include("starost.php"); }          // Statistika starost
+        else if ($_GET['menu'] == "6") { include("prosjecnastarost.php"); } // Statistika prosjecna starost
+        else if ($_GET['menu'] == "7") { include("primanja.php"); }         // Statistika primanja
+        else if ($_GET['menu'] == "8") { include("prosjecnaprimanja.php"); }// Statistika primanja
+      ?>                                                              
       </div>
     </div>
+    <footer>  
+      <?php include_once "podnozje.php"; ?>
+    </footer>
     <?php include_once "skripte.php" ?>
   </body>
 </html>

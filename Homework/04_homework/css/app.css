@@ -1,38 +1,19 @@
 table{
 	
-	width:80%;
+	width:100%;
 }
 
 table, th, td {
-	margin-top: 2cm;
+	margin-top: 1cm;
 	border: 1px solid black;
 	border-top: hidden;
 	border-bottom: hidden;
 	text-align: center;
 }
 
-.topnav {
-    background-color:#184D80;
-    overflow: hidden;
-    text-align: center;
-    display: inline-block;
-  }
-  
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a:hover {
-    background-color:#0078C1;
-    color: #fff;
-  }
-
-.topnav a.active {
-  background-color: #0078C1;
-  color: white;
+.uredenje{
+	margin-top: 2cm;
+	display: inline-block;
+	text-align: center;
 }
+
