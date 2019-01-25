@@ -1,3 +1,4 @@
+<?php include_once "2_1_noviforma.php"?>
 <table>
     <caption>Pregled zaposlenika</caption>
     <tr>
@@ -8,7 +9,7 @@
         <th>iznos mjesečnih primanja</th>
     </tr>
     <tr>
-        <td>Testni1</td>
+        <td><?= $ime?></td>
         <td>Prezimeni1</td> 
         <td>1.1.2000</td>
         <td>Muški</td>
