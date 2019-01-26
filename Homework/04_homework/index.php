@@ -6,7 +6,6 @@ while( true ) {
         break;
     }
 }
-
 function printMenu() {
     echo "---- GLAVNI IZBORNIK ----\n";
     echo "1 - Pregled zaposlenika\n";
@@ -19,6 +18,41 @@ function printMenu() {
     echo "Unesi izbor od 1 do 6: ";
 }
 
+switch( $choice ) {
+    case 1:
+        {
+            echo " TEST 1 ODABIR";
+            break;
+        }
+    case 2:
+        {
+            echo " TEST 2 ODABIR";
+            //Unos novog zaposlenika
+            break;
+        }
+    case 3:
+        {
+            echo " TEST 3 ODABIR";
+            //Promjena podataka na zaposleniku
+            break;
+        }
+    case 4:
+        {
+            echo " TEST 4 ODABIR";
+            //Brisanje zaposlenika
+            break;
+        }
+    case 5:
+        {
+            printStats();
+            $choiceStats = trim( fgets(STDIN) );// Read user choice
+            break;
+        }
+    default:
+        {
+            echo "\n\nNo choice is entered. Please provide a valid choice.\n\n";
+        }
+}
 function printStats()  {
     echo "---- IZBORNIK STATISTIKE ----\n";
     echo "1 - Ukupna starost zaposlenika\n";
@@ -30,29 +64,4 @@ function printStats()  {
     echo "---- IZBORNIK STATISTIKE ----\n";
     echo "Unesi izbor od 1 do 6: ";
 }
-
-switch( $choice ) {
-    case 1:
-        {
-            // Tu ide popis zaposlenika
-
-            break;
-        }
-    case 2:
-        {
-            break;
-        }
-    case 3:
-        {
-            break;
-        }
-    case 4:
-        {
-            break;
-        }
-    default:
-        {
-            echo "\n\nNo choice is entered. Please provide a valid choice.\n\n";
-        }
-}
-}
+//php C:\xampp\htdocs\IPA\Homework\04_homework\index.php
