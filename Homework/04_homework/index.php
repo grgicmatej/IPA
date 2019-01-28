@@ -136,54 +136,49 @@ function printStats()
 
 class Zaposlenik
 {
-    // private $id; Nisam siguran jel ide tu ili u objektu preko extenda
+    private $id;
     private $ime;
     private $prezime;
-    private $datumrodenja;
+    private $datumRodenja;
     private $spol;
     private $primanja;
-
-    public function getIme()
+    public function __get($property)
     {
-        return $this->ime;
+        if (property_exists($this, $property)) {
+            return $this->$property;
+        }
     }
-    public function setIme($ime)
+    public function __set($property, $value)
     {
-        $this->ime = $ime;
+        if (isset($property)) {
+            $this->$property = $value;
+        }else{
+            echo 'potrebno je unjeti sve podatke';
+        }
+        return $this;
     }
-    public function getPrezime()
+    public function __construct($id, $ime, $prezime, $datumRodenja, $spol, $primanja)
     {
-        return $this->prezime;
-    }
-    public function setPrezime($prezime)
-    {
-        $this->prezime = $prezime;
-    }
-    public function getDatumrodenja()
-    {
-        return $this->datumrodenja;
-    }
-    public function setDatumrodenja($datumrodenja)
-    {
-        $this->datumrodenja = $datumrodenja;
-    }
-    public function getSpol()
-    {
-        return $this->spol;
-    }
-    public function setSpol($spol)
-    {
-        $this->spol = $spol;
-    }
-    public function getPrimanja()
-    {
-        return $this->primanja;
-    }
-    public function setPrimanja($primanja)
-    {
-        $this->primanja = $primanja;
+        $this->id($id);
+        $this->ime($ime);
+        $this->prezime($prezime);
+        $this->datumRodenja($datumRodenja);
+        $this->spol($spol);
+        $this->primanja($primanja);
     }
 }
+
+$zaposlenik = new zaposlenik();
+$choiceMain = trim( fgets(STDIN) );
+$zaposlenik->ime = $choiceMain;
+$zaposlenik->prezime= $choiceMain;
+
+
+
+
+
+
+
 
 /* DODAVANJE PODATAKA
 $o=new Zaposlenik();
