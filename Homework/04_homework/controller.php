@@ -2,7 +2,7 @@
 function nameCheck($input)
 {
     if($input==="" || !preg_match('/^[a-z][a-z\s]*$/', $input)){
-        echo "Ime/prezime ne može biti prazno i sadržavati brojeve.\nUnesite novo ime/prezime:\n";
+        echo "Ime/prezime ne moze biti prazno i/ili sadrzavati brojeve.\nUnesite novo ime/prezime:\n";
         return nameCheck(readline());
     }
     return $input;
@@ -10,12 +10,12 @@ function nameCheck($input)
 function idCheck($input, $objectArray)
 {
     if($input==="" || !preg_match('/^\d+$/', $input)){
-        echo "Morate unijeti ID cjelobrojne vrijednosti.\nUnesite novi ID:\n";
+        echo "ID je cijeli broj\nUnesite novi ID:\n";
         return idCheck(readline(),$objectArray);
     }
     foreach ($objectArray as $id => $value){
         if($value->getId() === $input){
-            echo "Employee s istim ID-em već postoji.\nUnesite novi ID:\n";
+            echo "ID vec postoji\nUnesite novi ID:\n";
             return idCheck(readline(),$objectArray);
         }
     }
@@ -25,7 +25,7 @@ function incomeCheck($input)
 {
     $input = floatval(str_replace(",",".",$input));
     if($input==="" || !is_float($input) || $input<=0){
-        echo "Mjesečno primanje mora biti decimalan broj veći od 0.\nUnesite novu vrijednost:\n";
+        echo "Mjesecno primanje mora biti decimalan broj veci od 0.\nUnesite novu vrijednost:\n";
         return incomeCheck(readline());
     }
     return number_format($input,2,'.','');
@@ -43,8 +43,8 @@ function dateCheck($input)
 }
 function genderCheck($input)
 {
-    if($input==="" || ($input !== "m" && $input !== "ž")){
-        echo "Spol može biti muški ili ženski.\nUnesite 'm' ili 'ž':\n";
+    if($input !== "m" && $input !== "z"){
+        echo "Spol moze biti muski ili zenski.\nUnesite 'm' ili 'z':\n";
         return genderCheck(readline());
     }
     return $input;
