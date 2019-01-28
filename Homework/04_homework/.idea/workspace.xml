@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a0a77b8-73d2-48a6-8513-627ddd7c8523" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="7a0a77b8-73d2-48a6-8513-627ddd7c8523" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,12 +13,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
+            <state relative-caret-position="176">
+              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
               <folding>
                 <element signature="e#220#1566#0#PHP" />
                 <element signature="e#1607#3095#0#PHP" />
                 <element signature="e#3138#3518#0#PHP" />
+                <element signature="e#3557#3937#0#PHP" />
                 <element signature="n#getIme#0;n#Zaposlenik#0;n#!!top" />
                 <element signature="n#setIme#0;n#Zaposlenik#0;n#!!top" />
                 <element signature="n#getPrezime#0;n#Zaposlenik#0;n#!!top" />
@@ -49,10 +48,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -103,12 +102,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1548487810834</updated>
-      <workItem from="1548487812024" duration="8450000" />
+      <workItem from="1548487812024" duration="9171000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8450000" />
+    <option name="totallyTimeSpent" value="9171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -152,12 +151,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
+        <state relative-caret-position="176">
+          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
           <folding>
             <element signature="e#220#1566#0#PHP" />
             <element signature="e#1607#3095#0#PHP" />
             <element signature="e#3138#3518#0#PHP" />
+            <element signature="e#3557#3937#0#PHP" />
             <element signature="n#getIme#0;n#Zaposlenik#0;n#!!top" />
             <element signature="n#setIme#0;n#Zaposlenik#0;n#!!top" />
             <element signature="n#getPrezime#0;n#Zaposlenik#0;n#!!top" />
