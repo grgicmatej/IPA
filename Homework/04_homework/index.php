@@ -1,187 +1,167 @@
+
+
 <?php
+require "Employee.php";
+include_once "controller.php";
+$employees = [];
 while( true ) {
-    printMenu();// Print the menu on console
-    $choice = trim( fgets(STDIN) );// Izbor korisnika
-    if( $choice == 0) {
+    // Print the menu on console
+    menuPrint();
+    // Read user choice
+    $choice = trim( fgets(STDIN) );
+    // Exit application
+    if( $choice == 6 ) {
         break;
     }
-    switchMenu($choice);
+    // Act based on user choice
+    switch( $choice ) {
+        case 1:
+        {
+            {
+                readEmployee($employees);
+                echo "Želite li se vratiti na izbornik? (DA/NE)\n";
+                if (strtolower(trim(fgets(STDIN))) !== 'da') {
+                    $bool = false;
+                }
+                break;
+            }
+        }
+        case 2:
+        {
+            echo "Upišite sve potrebne podatke: \n";
+            $employees[] = createEmployee($employees);
+            break;
+        }
+        case 3:
+        {
+            echo 'Upišite id korisnika kojeg zelite mjenjati';
+            $id = readline();
+            $employees[] = updateEployee($employees, $id);
+            break;
+        }
+        case 4:
+        {
+            echo 'Upišite id korisnika kojeg zelite obrisati';
+            $id = readline();
+            $employees[] = deleteEmployee($employees, $id);
+            break;
+        }
+        default:
+        {
+            echo "\n\nNo choice is entered. Please provide a valid choice.\n\n";
+        }
+    }
 }
-//switchMenu($choice);
-function switchMenu($x)
-{
-    switch($x) {
-        case "1":
-            {
-                echo " TEST 1 ODABIR\n\n";
-                /*
-                 Tu ide logika pregleda zaposlenika
-                */
-                echo "\n\nZa povratak na glavni izbornik unesite 5";
-                break;
-            }
-        case "2":
-            {
-                echo " TEST 2 ODABIR\n\n";
-                /*
-                 Tu ide logika Unos novog zaposlenika
-                */
-                echo "\n\nZa povratak na glavni izbornik unesite 5";
-                break;
-            }
-        case "3":
-            {
-                echo " TEST 3 ODABIR\n\n";
-                /*
-                Tu ide logika promjena podataka na zaposleniku
-                */
-                echo "\n\nZa povratak na glavni izbornik unesite 5";
-                break;
-            }
-        case "4":
-            {
-                echo " TEST 4 ODABIR\n\n";
-                /*
-                Tu ide logika brisanja podataka zaposlenika
-                */
-                echo "\n\nZa povratak na glavni izbornik unesite 5";
-                break;
-            }
-        case "5":
-            {
-                printStats();
-                $choiceStats = trim(fgets(STDIN));// Izbor korisnika
-                switchStats($choiceStats);
-            }
-    }
-
-}        // Tu su switchevi glavnog menija
-function switchStats($x)
-{
-    switch ($x){
-        case "1":
-            {
-                echo "\n\n TEST STATISTIKA 1 ODABIR\n\n";
-                /*
-                Tu ide logika statistike ukupne starosti zaposlenika
-                */
-                echo "\n\nZa povratak na glavni izbornik unesite 5";
-                break;
-            }
-        case "2":
-            {
-                echo "\n\n TEST STATISTIKA 2 ODABIR\n\n";
-                /*
-                 Tu ide logika statistike  prosjecne starosti zaposlenika
-                */
-                echo "\n\nZa povratak na glavni izbornik unesite 5";
-                break;
-            }
-        case "3":
-            {
-                echo "\n\n TEST STATISTIKA 3 ODABIR\n\n";
-                /*
-                 Tu ide logika statistike ukupnih primanja zaposlenika
-                */
-                echo "\n\nZa povratak na glavni izbornik unesite 5";
-                break;
-            }
-        case "4":
-            {
-                echo "\n\n TEST STATISTIKA 4 ODABIR\n\n";
-                /*
-                 Tu ide logika statistike prosjecnih primanja zaposlenika
-                */
-                echo "\n\nZa povratak na glavni izbornik unesite 5";
-                break;
-            }
-        case "5":
-            {
-                break;
-            }
-        /*default:
-            {
-                echo "\n\nNo(or)wrong choice is entered. Please provide a valid choice.\n\n";
-            }*/
-    }
-}       // Tu su switchevi menija statistike
-function printMenu()
-{
-    echo "\n---- GLAVNI IZBORNIK ----\n";
-    echo "1 - Pregled zaposlenika\n";
-    echo "2 - Unos novog zaposlenika\n";
-    echo "3 - Promjena podataka postojecem zaposleniku\n";
-    echo "4 - Brisanje zaposlenika\n";
+function menuPrint() {
+    echo "============== Izbornik ==============\n";
+    echo "1 - Pregled Zaposlenika\n";
+    echo "2 - Unos novog Zaposlenika\n";
+    echo "3 - Promjena podataka postojećem zaposleniku\n";
+    echo "4 - Brisanje Zaposlenika\n";
     echo "5 - Statistika\n";
-    echo "0 - Izlaz iz aplikacije\n";
-    echo "---- GLAVNI IZBORNIK ----\n";
-    echo "Unesi svoj izbor: ";
-}          // Tu je ispis glavnog menija
-function printStats()
+    echo "6 - Izlaz\n";
+}
+function createEmployee($employeeList = null)
 {
-    echo "\n---- IZBORNIK STATISTIKE ----\n";
-    echo "1 - Ukupna starost zaposlenika\n";
-    echo "2 - Prosjecna starost zaposlenika\n";
-    echo "3 - Ukupna primanja zaposlenika\n";
-    echo "4 - Prosjecna primanja zaposlenika\n";
-    echo "5 - Povratak na glavni izbornik\n";
-    echo "---- IZBORNIK STATISTIKE ----\n";
-    echo "Unesi svoj izbor: ";
-}        // TU je ispis menija statistike
-
-// Putanja
-// php C:\xampp\htdocs\IPA\Homework\04_homework\index.php
-
-// klase
-
-class Zaposlenik
-{
-    private $id;
-    private $ime;
-    private $prezime;
-    private $datumRodenja;
-    private $spol;
-    private $primanja;
-    public function __get($property)
+    echo "ID: (int)";
+    $id = idCheck(readline(),$employeeList);
+    echo "Ime: (string)";
+    $firstName = nameCheck(readline());
+    echo "Prezime: (string)";
+    $lastName = nameCheck(readline());
+    echo "Datum rođenja (dd.mm.yyyy): ";
+    $birthDay = dateCheck(readline());
+    echo "Spol: (m/ž)";
+    $gender = genderCheck(readline());
+    echo "Mjesečna primanja: (float)";
+    $income = incomeCheck(readline());
+    return new Employee($id, $firstName, $lastName, $birthDay, $gender, $income);
+}
+function readEmployee($employeeList) {
+    echo "====================================\n";
+    foreach ($employeeList as $id => $value)
     {
-        if (property_exists($this, $property)) {
-            return $this->$property;
-        }
-    }
-    public function __set($property, $value)
-    {
-        if (isset($property)) {
-            $this->$property = $value;
-        }else{
-            echo 'potrebno je unjeti sve podatke';
-        }
-        return $this;
-    }
-    public function __construct($id, $ime, $prezime, $datumRodenja, $spol, $primanja)
-    {
-        $this->id($id);
-        $this->ime($ime);
-        $this->prezime($prezime);
-        $this->datumRodenja($datumRodenja);
-        $this->spol($spol);
-        $this->primanja($primanja);
+        echo "ID: " . $value->getId() . "\n";
+        echo "IME: " . $value->getFirstName(). "\n";
+        echo "PREZIME: " . $value->getLastName()."\n";
+        echo "DATUM ROĐENJA: " . $value->getBirthDay()."\n";
+        echo "SPOL: " . $value->getGender()."\n";
+        echo "MJESEČNA PRIMANJA: " . $value->getIncome()."\n";
+        echo "====================================\n";
     }
 }
-
-$zaposlenik = new zaposlenik();
-$choiceMain = trim( fgets(STDIN) );
-$zaposlenik->ime = $choiceMain;
-$zaposlenik->prezime= $choiceMain;
-
-
-
-
-
-
-
-
-/* DODAVANJE PODATAKA
-$o=new Zaposlenik();
-$o->setIme("Matej");
-$o->setPrezime("Grgic");
-var_dump($o);*/
+function updateEployee($employeeList, $employeeId){
+    foreach ($employeeList as $id => $employee){
+        if ($employee->getId()=== $employeeId){
+            echo "Koji podatak želite promijeniti (1-6)?\n";
+            echo "1. ID\n";
+            echo "2. IME\n";
+            echo "3. PREZIME\n";
+            echo "4. DATUM ROĐENJA\n";
+            echo "5. SPOL\n";
+            echo "6. MJESEČNA PRIMANJA\n";
+            switch (readline())
+            {
+                case 1:
+                {
+                    echo 'Stara vrijednost id-a je :'. $employee->getId() . "\n";
+                    echo 'Nova vrijednost je :'. "\n";
+                    $employee->setId(idCheck(readline(),$employeeList));
+                    break;
+                }
+                case 2:
+                {
+                    echo 'Stara vrijednost imena je :' . $employee->getFirstName() . "\n";
+                    echo 'Nova vrijednost imena je :' . "\n";
+                    $employee->setFirstName(nameCheck(readline()));
+                    break;
+                }
+                case 3:
+                {
+                    echo 'Stara vrijednost prezimena je :' . $employee->getLastName() . "\n";
+                    echo 'Nova vrijednost prezimena je :' . "\n";
+                    $employee->setLastName(nameCheck(readline()));
+                    break;
+                }
+                case 4:
+                {
+                    echo 'Stara vrijednost datuma rođenja je:' . $employee->getBirthDay() . "\n";
+                    echo 'Nova vrijednost datuma rođenja je :';
+                    $employee->setBirthDay(dateCheck(readline()));
+                    break;
+                }
+                case 5:
+                {
+                    echo 'Stara vrijednost spola je:' . $employee->getGender() . "\n";
+                    echo 'Nova vrijednost spola je :';
+                    $employee->setGender(genderCheck(readline()));
+                    break;
+                }
+                case 6:
+                {
+                    echo 'Stara vrijednost primanja je:' . $employee->getIncome() . "\n";
+                    echo 'Nova vrijednost primanja je :';
+                    $employee->setIncome(incomeCheck(readline()));
+                    break;
+                }
+            }
+        }
+    }
+}
+//function deleteEmployee($employeeList, $employeeId)
+//{
+//    foreach ($employeeList as $id => $employee){
+//        if ($employee->getId()=== $employeeId) {
+//            unset($employeeList[$id]);
+//            return $employeeList;
+//        }
+//    }
+//
+//}
+function deleteEmployee($array, $value, $strict = TRUE)
+{
+    if(($key = array_search($value, $array, $strict)) !== FALSE) {
+        unset($array[$key]);
+    }
+    return $array;
+}
