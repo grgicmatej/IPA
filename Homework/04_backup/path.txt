@@ -1,1 +1,0 @@
-PHP>php C:\xampp\htdocs\IPA\Homework\04_homework\index.php
