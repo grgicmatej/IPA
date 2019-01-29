@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a0a77b8-73d2-48a6-8513-627ddd7c8523" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/employee.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +17,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+            <state relative-caret-position="701">
+              <caret line="196" column="36" selection-start-line="196" selection-start-column="36" selection-end-line="196" selection-end-column="36" />
+              <folding>
+                <element signature="n#menuPrint#0;n#!!top" />
+                <element signature="n#createEmployee#0;n#!!top" />
+                <element signature="n#readEmployee#0;n#!!top" />
+                <element signature="n#updateEployee#0;n#!!top" />
+                <element signature="e#2723#5033#0#PHP" />
+                <element signature="n#deleteEmployee#0;n#!!top" />
+                <element signature="n#sumyears#0;n#!!top" />
+                <element signature="n#averageyears#0;n#!!top" />
+                <element signature="n#totalincome#0;n#!!top" />
+                <element signature="n#incomediffmf#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -24,8 +38,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/employee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            <state relative-caret-position="264">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="n#__construct#0;n#Employee#0;n#!!top" />
+                <element signature="n#setAge#0;n#Employee#0;n#!!top" />
+                <element signature="n#getAge#0;n#Employee#0;n#!!top" />
+                <element signature="n#getId#0;n#Employee#0;n#!!top" />
+                <element signature="n#setId#0;n#Employee#0;n#!!top" />
+                <element signature="n#getFirstName#0;n#Employee#0;n#!!top" />
+                <element signature="n#setFirstName#0;n#Employee#0;n#!!top" />
+                <element signature="n#getLastName#0;n#Employee#0;n#!!top" />
+                <element signature="n#setLastName#0;n#Employee#0;n#!!top" />
+                <element signature="n#getBirthDay#0;n#Employee#0;n#!!top" />
+                <element signature="n#setBirthDay#0;n#Employee#0;n#!!top" />
+                <element signature="n#getGender#0;n#Employee#0;n#!!top" />
+                <element signature="n#setGender#0;n#Employee#0;n#!!top" />
+                <element signature="n#getIncome#0;n#Employee#0;n#!!top" />
+                <element signature="n#setIncome#0;n#Employee#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -33,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="46" column="66" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
+            <state relative-caret-position="66">
+              <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -109,12 +140,12 @@
       <option name="presentableId" value="Default" />
       <updated>1548487810834</updated>
       <workItem from="1548487812024" duration="10649000" />
-      <workItem from="1548713081680" duration="3355000" />
+      <workItem from="1548713081680" duration="8707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14004000" />
+    <option name="totallyTimeSpent" value="19356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -147,22 +178,51 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="46" column="66" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
+        <state relative-caret-position="66">
+          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/employee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        <state relative-caret-position="264">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="n#__construct#0;n#Employee#0;n#!!top" />
+            <element signature="n#setAge#0;n#Employee#0;n#!!top" />
+            <element signature="n#getAge#0;n#Employee#0;n#!!top" />
+            <element signature="n#getId#0;n#Employee#0;n#!!top" />
+            <element signature="n#setId#0;n#Employee#0;n#!!top" />
+            <element signature="n#getFirstName#0;n#Employee#0;n#!!top" />
+            <element signature="n#setFirstName#0;n#Employee#0;n#!!top" />
+            <element signature="n#getLastName#0;n#Employee#0;n#!!top" />
+            <element signature="n#setLastName#0;n#Employee#0;n#!!top" />
+            <element signature="n#getBirthDay#0;n#Employee#0;n#!!top" />
+            <element signature="n#setBirthDay#0;n#Employee#0;n#!!top" />
+            <element signature="n#getGender#0;n#Employee#0;n#!!top" />
+            <element signature="n#setGender#0;n#Employee#0;n#!!top" />
+            <element signature="n#getIncome#0;n#Employee#0;n#!!top" />
+            <element signature="n#setIncome#0;n#Employee#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="85" column="4" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+        <state relative-caret-position="701">
+          <caret line="196" column="36" selection-start-line="196" selection-start-column="36" selection-end-line="196" selection-end-column="36" />
+          <folding>
+            <element signature="n#menuPrint#0;n#!!top" />
+            <element signature="n#createEmployee#0;n#!!top" />
+            <element signature="n#readEmployee#0;n#!!top" />
+            <element signature="n#updateEployee#0;n#!!top" />
+            <element signature="e#2723#5033#0#PHP" />
+            <element signature="n#deleteEmployee#0;n#!!top" />
+            <element signature="n#sumyears#0;n#!!top" />
+            <element signature="n#averageyears#0;n#!!top" />
+            <element signature="n#totalincome#0;n#!!top" />
+            <element signature="n#incomediffmf#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -18,7 +18,7 @@ while( true ) {
         case 1:
         {
             readEmployee($employees);
-            echo "\n Za povratak na glavni izbornik upisite da\n";
+            echo "\n Za povratak na glavni izbornik upisite bilo sto\n";
             if (strtolower(trim(fgets(STDIN))) !== 'da') {
                 $bool = false;
             }
@@ -46,7 +46,26 @@ while( true ) {
         }
         case 5:
         {
-            echo "Statistika zaposlenika";
+            echo "Statistika zaposlenika \n\n";
+            echo "ukupna starost: ";
+            sumyears($employees);
+            echo "\n\n";
+
+            echo "Prosjecna starost: ";
+            averageyears($employees);
+            echo "\n\n";
+
+            echo "Ukupna primanja: ";
+            totalincome($employees);
+            echo "\n\n";
+
+            echo "Razlika prosjecnih primanja izmedu zena i muskaraca: \n";
+            incomediffmf($employees);
+            echo "\n\n";
+            echo "\n Za povratak na glavni izbornik upisite bilo sto\n";
+            if (strtolower(trim(fgets(STDIN))) !== 'da') {
+                $bool = false;
+            }
             break;
         }
         default:
@@ -55,7 +74,8 @@ while( true ) {
         }
     }
 }
-function menuPrint() {
+function menuPrint()
+{
     echo "//// Glavni izbornik\n";
     echo "1 - Pregled Zaposlenika\n";
     echo "2 - Unos novog Zaposlenika\n";
@@ -78,22 +98,11 @@ function createEmployee($employeeList = null)
     $gender = genderCheck(readline());
     echo "Mjesecna primanja: (float)";
     $income = incomeCheck(readline());
-
-
-    function getAge($birthDay) {
-        return $age=intval(date('Y', time() - strtotime($birthDay))) - 1970;
-    }
-
-
-
-
-
-
-
-
+    $age = floor((time() - strtotime($birthDay)) / (60*60*24*365));
     return new Employee($id, $firstName, $lastName, $birthDay, $gender, $income, $age);
 }
-function readEmployee($employeeList) {
+function readEmployee($employeeList)
+{
     echo "//// \n";
     foreach ($employeeList as $id => $value)
     {
@@ -103,10 +112,12 @@ function readEmployee($employeeList) {
         echo "DATUM RODENJA: " . $value->getBirthDay()."\n";
         echo "SPOL: " . $value->getGender()."\n";
         echo "MJESECNA PRIMANJA: " . $value->getIncome()."\n";
+        //echo "Godine: " . $value->getAge()."\n";  Samo za test
         echo "//// \n";
     }
 }
-function updateEployee($employeeList, $employeeId){
+function updateEployee($employeeList, $employeeId)
+{
     foreach ($employeeList as $id => $employee){
         if ($employee->getId()!== $employeeId){
             echo "krivi id";
@@ -172,4 +183,77 @@ function deleteEmployee($array, $value, $strict = TRUE)
         unset($array[$key]);
     }
     return $array;
+}
+function sumyears($employeeList)
+{
+    $agesum = [];
+    foreach ($employeeList as $id => $value)
+    {
+        $agesum[]=$value->getAge();
+    }
+    //print_r($agesum);
+    echo $sumofage = array_sum($agesum)."\n";
+}
+function averageyears($employeeList)
+{
+    $agelist = [];
+    foreach ($employeeList as $id => $value)
+    {
+        $agelist[]=$value->getAge();
+    }
+    //print_r($agesum);
+    echo $average_of_foo = array_sum($agelist) / count($agelist)."\n";
+}
+function totalincome($employeeList)
+{
+    $moneysum= [];   // godine do 20
+    $moneysum20 = [];   // godine od 21 do 30
+    $moneysum30 = [];   // godine od 31 do 40
+    $moneysum40 = [];   // godine od 41
+
+    foreach ($employeeList as $id => $value)
+    {
+        $Employeeage= $value->getAge();
+        if($Employeeage<21){
+            $moneysum[]=$value->getIncome();
+        }else if ($Employeeage>20 && $Employeeage <31){
+            $moneysum20[]=$value->getIncome();
+        }else if ($Employeeage>30 && $Employeeage <41){
+            $moneysum30[]=$value->getIncome();
+        }else if ($Employeeage>40){
+            $moneysum40[]=$value->getIncome();
+        }
+
+    }
+    //print_r($agesum);
+    echo $income = "Ukupna primanja zaposlenika do 20god: ".array_sum($moneysum)."\n";
+    echo $income = "Ukupna primanja zaposlenika od 20god do 30god: ".array_sum($moneysum20)."\n";
+    echo $income = "Ukupna primanja zaposlenika od 30god do 40god: ".array_sum($moneysum30)."\n";
+    echo $income = "Ukupna primanja zaposlenika starijih od 40: ".array_sum($moneysum40)."\n";
+}
+function incomediffmf($employeeList)
+{
+    $moneysumf = [];   // Prihodi zena
+    $moneysumm = [];   // Prihodi muskaraca
+
+    foreach ($employeeList as $id => $value) {
+        $employeegender = $value->getGender();
+        if ($employeegender === "z") {
+            $moneysumf[] = $value->getIncome();
+        } else {
+            $moneysumm[] = $value->getIncome();
+        }
+    }
+    //print_r($agesum);
+    if (empty($moneysumf)) {
+        echo "Prosjecna primanja zenskih zaposlenika: 0\n";
+    } else {
+        echo "Prosjecna primanja zenskih zaposlenika " . array_sum($moneysumf) / count($moneysumf) . "\n";
+
+    }
+    if (empty($moneysumm)) {
+        echo "Prosjecna primanja muskih zaposlenika: 0\n";
+    } else {
+        echo "Prosjecna primanja muskih zaposlenika " . array_sum($moneysumm) / count($moneysumm) . "\n";
+    }
 }

@@ -9,7 +9,7 @@ class Employee
     private $income;
     private $age;
 
-    public function __construct($id, $firstName, $lastName, $birthDay, $gender, $income)
+    public function __construct($id, $firstName, $lastName, $birthDay, $gender, $income, $age)
     {
         $this->id = $id;
         $this->firstName = $firstName;
