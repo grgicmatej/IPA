@@ -78,20 +78,7 @@ function createEmployee($employeeList = null)
     $gender = genderCheck(readline());
     echo "Mjesecna primanja: (float)";
     $income = incomeCheck(readline());
-
-
-    function getAge($birthDay) {
-        return $age=intval(date('Y', time() - strtotime($birthDay))) - 1970;
-    }
-
-
-
-
-
-
-
-
-    return new Employee($id, $firstName, $lastName, $birthDay, $gender, $income, $age);
+    return new Employee($id, $firstName, $lastName, $birthDay, $gender, $income);
 }
 function readEmployee($employeeList) {
     echo "//// \n";

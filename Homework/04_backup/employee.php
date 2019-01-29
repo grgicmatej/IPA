@@ -7,7 +7,6 @@ class Employee
     private $birthDay;
     private $gender;
     private $income;
-    private $age;
 
     public function __construct($id, $firstName, $lastName, $birthDay, $gender, $income)
     {
@@ -17,16 +16,6 @@ class Employee
         $this->birthDay = $birthDay;
         $this->gender = $gender;
         $this->income = $income;
-        $this->age=$age;
-    }
-
-    public function setAge($age)
-    {
-        $this->age = $age;
-    }
-    public function getAge()
-    {
-        return $this->age;
     }
     public function getId()
     {

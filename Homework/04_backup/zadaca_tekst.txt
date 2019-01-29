@@ -1,0 +1,41 @@
+- Kreirati gihub repozitorij InchooPHPAkademijaZ4. 
+- Kreirajte konzolnu aplikaciju koja omoguæuje 
+	pregled, unos, promjenu, brisanje Zaposlenika, ispis statistièkih podataka. 
+- Zaposlenik ima 
+	- id, 
+	- ime, 
+	- prezime, 
+	- datum roðenja, 
+	- spol
+	- iznos mjeseènih primanja.
+- Aplikacija kontrolira unos prema sljedeæim pravilima:
+	- sva definirana svojstva se moraju unijeti
+	- ne smiju biti dvije osobe s istim id
+ 	- datum roðenja se unosi prema formatu dd. MM. YYYY (npr. 12. 12. 1980)
+	- ime i prezime ne smije biti prazno i ne smije sadržavati brojeve
+	- mjeseèno primanje mora biti decimalni broj veæi od 0
+	- prilikom izmjene pojedinih svojstava osobe prikazati stare vrijednosti
+	- prilikom brisanja postaviti pitanje jeste li sigurni?
+
+- Statistièki podaci koji su dostupni:
+	- Ukupna starost svih osoba izražena u godinama, mjesecima i danima
+	- Prosjeèna starost izražena u godinama
+	- Ukupna primanja svih osoba prema dobnim granicama do 20 g, 20 - 30g, 30 - 40 g, 40 i stariji
+	- Razlika prosjeènih primanja izmeðu muškaraca i žena
+
+- Izgled izbornika
+	1. Pregled Zaposlenika
+	2. Unos novog Zaposlenika
+	3. Promjena podataka postojeæem zaposleniku
+	4. Brisanje Zaposlenika
+	5. Statistika
+	
+- Pod izbornik statistike:
+	1. Ukupna starost
+	2. Prosjeèna starost
+	3. Ukupna primanja
+	4. Prosjeèna primanja
+
+- Implementiradi uèahurivanje, nasljeðivanje, magiène metode (posebno __construct).
+
+Aplikacija se ne postavlja na server veæ samo na github.
