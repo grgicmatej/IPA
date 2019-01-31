@@ -8,31 +8,25 @@ final class App
         $pathInfo = trim($pathInfo, '/');
         $pathParts = explode('/', $pathInfo);
 
-        if(!isset($pathParts[0]) || empty($pathParts[0])){
-            $controller = 'Index';
-        } else {
-            $controller = ucfirst(strtolower($pathParts[0]));
-        }
+        (!isset($pathParts[0]) || empty($pathParts[0])) ? $controller = 'Index': $controller = ucfirst(strtolower($pathParts[0]));
         $controller .= 'Controller';
 
-        if(!isset($pathParts[1]) || empty($pathParts[1])){
-            $action = 'Index';
-        } else {
-            $action = strtolower($pathParts[1]);
-        }
+        (!isset($pathParts[1]) || empty($pathParts[1])) ? $action = 'Index' : $action = strtolower($pathParts[1]);
 
-        if(class_exists($controller) && method_exists($controller, $action)){
-            $controllerInstance = new $controller;
-            $controllerInstance->$action();
-        }else{
-            header("HTTP/1.0 404 Not Found");
-        }
+        (class_exists($controller) && method_exists($controller, $action)) ? controller($controller, $action) : error404();
     }
 }
 
+function controller($controller, $action)
+{
+    $controllerInstance = new $controller;
+    $controllerInstance->$action() ;
+}
 
-
-
-
+function error404()
+{
+    $view = new View();
+    $view->render('error');
+}
 
 
