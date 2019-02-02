@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d017d37d-5911-494e-8d11-dd59b46fdfc8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controller/IndexController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/App.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/Db.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/Request.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/View.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/entity/post.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view/index.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view/layout.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/view/view.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/polaznik05_mvc.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/layout.phtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,15 +36,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controller/IndexController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/entity/post.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="589">
@@ -68,11 +44,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/App.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
               <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/view/layout.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -145,7 +130,6 @@
         <option value="$PROJECT_DIR$/app/model/entity/post.php" />
         <option value="$PROJECT_DIR$/app/model/Request.php" />
         <option value="$PROJECT_DIR$/app/model/View.php" />
-        <option value="$PROJECT_DIR$/app/view/layout.phtml" />
         <option value="$PROJECT_DIR$/app/view/index.phtml" />
         <option value="$PROJECT_DIR$/app/view/view.phtml" />
         <option value="$PROJECT_DIR$/app/.htaccess" />
@@ -155,6 +139,7 @@
         <option value="$PROJECT_DIR$/polaznik05_mvc.sql" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/app/model/App.php" />
+        <option value="$PROJECT_DIR$/app/view/layout.phtml" />
       </list>
     </option>
   </component>
@@ -179,6 +164,17 @@
             <path>
               <item name="mvc" type="b2602c69:ProjectViewProjectNode" />
               <item name="mvc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mvc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mvc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,7 +232,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6982000" />
+    <option name="totallyTimeSpent" value="7128000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -292,13 +288,6 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/958f43d7-94b8-45fc-a47c-729f1c91cab7/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
@@ -381,6 +370,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/layout.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
