@@ -5,6 +5,7 @@ class Post
     private $id;
     private $content;
 
+
     public function __get($name)
     {
         return isset($this->$name) ? $this->$name : null;

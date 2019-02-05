@@ -1,0 +1,27 @@
+Zadaća 06
+
+
+Obavezne funkcionalnosti
+
+Postove na početnoj stranici poredati tako da se zadnje kreirani nalazi uvijek na prvom mjestu
+
+Uz svaki post se može priložiti i slika u jpg formatu, ali ona nije obavezna prilikom kreiranja. Ako je priložena, mora biti pokazana na početnoj stranici i u detaljima.
+
+U ispisu postova na početnoj stranici dodati vrijeme nastanka u ovom formatu 01.02.2019. 09:16
+
+Omogućiti pregled komentara za svaki post u njegovim detaljima
+
+Dodavanje novog komentara koji će se nalaziti prvi u popisu
+
+Na početnoj stranici ispisati broj komentara pored svakog posta.
+
+Svaki post se u njegovim detaljima može obrisati.
+
+Staviti config.php u .gitignore file. Na GitHubu se nikada ne nalaze produkcijski pristupni podaci.
+
+
+
+
+Poželjne funkcionalnosti
+
+Upogoniti RWD framework da aplikacija izgleda malo ljepše.

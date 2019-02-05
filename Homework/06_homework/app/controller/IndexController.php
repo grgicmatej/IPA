@@ -21,7 +21,17 @@ class IndexController
             $stmt -> bindValue('content', $_POST['content']);
             $stmt -> execute();
             header('Location: '.App::config('url'));
+
         }
+    }
+    public function deletePost()
+    {
+        $connection = Db::connect();
+
+        $sql = 'DELETE FROM post where id=:id';
+        $stmt = $connection -> prepare($sql);
+        $stmt -> execute($_POST);
+        header('Location: '.App::config('url'));
     }
     private function validate($data)
     {

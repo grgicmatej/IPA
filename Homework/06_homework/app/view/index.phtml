@@ -1,0 +1,25 @@
+
+
+
+
+
+
+<form method="post" action="<?php echo App::config('url') ?>Index/newPost">
+    <div class="form-group" style="padding-top: 2cm">
+        <label>
+            <p><h4>Express yourself</h4></p>
+            <input id="content" name="content" type="text" placeholder="What's on your mind?">
+        </label>
+        <button class="button" type="submit">Send</button>
+    </div>
+</form>
+
+<p><h5>Published posts:</h5></p>
+
+<?php foreach ($posts as $post): ?>
+
+
+<p><?php echo $post->getContent(); ?>
+<a href="<?php echo App::config('url')?>Index/view/<?php echo $post->getId()?>"> Read more</a>
+</p>
+<?php endforeach; ?>
