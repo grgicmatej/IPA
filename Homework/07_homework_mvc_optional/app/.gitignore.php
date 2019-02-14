@@ -2,7 +2,7 @@
 
 return [
     'url' => 'http://polaznik05mvc.inchoo4u.net/',
-    'mode'  => 'production',
+    'mode'  => 'development',
     "db"=>[
         "host"=>"localhost",
         "name"=>"polaznik05_mvc",
