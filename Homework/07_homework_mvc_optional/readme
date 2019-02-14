@@ -1,0 +1,11 @@
+nadzornik rola: email: admin@admin.com pass admin
+sve ostale uloge:
+    user1@gmail.com
+        2
+        3
+        ..
+    svima je pass "qwer"
+
+Glavni user:
+    u:admin@admin.com / p:admin</p>
+

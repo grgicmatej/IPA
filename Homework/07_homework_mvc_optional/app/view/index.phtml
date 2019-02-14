@@ -1,0 +1,56 @@
+
+<div class="large-12 column" style="text-align: right; margin-top: 1cm">
+    <a href="readme">Readme!</a>
+</div>
+ <?php if(!Session::getInstance()->isLoggedIn()): ?>
+    <div class="large-6 column" style="text-align: left; margin-top: 1cm">
+        <a href="<?php echo App::config("url")."admin/login" ?>">Login</a>
+        <a href="<?php echo App::config("url")."admin/registration" ?>">Registration</a>
+    </div>
+ <?php else: ?>
+    <div class="large-12 column" style="text-align: left; margin-top: 1cm">
+        <a href="<?php echo App::config("url")?>admin/logout">Logout <?php echo Session::getInstance()->getUser()->name ?></a>
+    </div>
+    <div class="large-12 column" style="text-align: left">
+        <a href="<?php echo App::config("url")?>user/prepareedit">Edit user</a>
+    </div>
+    <?php endif; ?>
+
+<?php if(Session::getInstance()->isLoggedIn()):?>
+    <div class="large-12 column" style="margin-top: 2cm">
+        <form method="post" class="form-inline" action="<?php echo App::config('url') ?>Index/newPost">
+            <label for="content">What's on your mind?</label>
+            <input style="width: 100%; height: 2cm; text-align: center;"type="text" id="content" name="content">
+
+            <label for="tag1">Add first tag</label>
+            <input style="width: 20%" type="text" id="tag" name="tag">
+
+            <input type="submit" class="success button " value="Post"/>
+        </form>
+    </div>
+<?php endif; ?>
+ <div class="large-12 column" style="margin-top: 2cm">
+
+ <?php foreach ($posts as $post): ?>
+    <p>
+        <cite><?= htmlspecialchars($post->getUser()) ?></cite>
+        <?php echo $post->date ?>
+            <a href="<?php echo App::config('url') ?>Index/view/<?= $post->getId() ?> ">
+                <?= htmlspecialchars($post->getContent()) ?> </a> <br />
+
+            <?php if( Session::getInstance()->isLoggedIn() ): ?>
+                <a href="<?php echo App::config('url') ?>admin/like/<?php echo $post->id ?>">Like</a>
+            <?php endif; ?>
+
+            (<?php echo $post->getLikes() ?> likes)
+
+            <?php foreach ($post->getComments() as $comment): ?>
+                <p style="margin-left: 20px;">
+                    <cite><?= htmlspecialchars($comment->user) ?></cite>
+                    <?php echo $comment->date ?><br />
+                    <?php echo $comment->content ?>
+                </p><hr />
+            <?php endforeach; ?>
+    </p>
+<?php endforeach; ?>
+ </div>

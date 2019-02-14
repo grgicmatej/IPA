@@ -1,0 +1,23 @@
+<?php echo $message?>
+<form class="log-in-form" method="post"
+      action="<?php echo App::config("url")?>user/edit/
+                                        <?php echo Session::getInstance()->getUser()->id ?>">
+    <div class="form-group">
+        <label for="firstname">First name</label>
+        <input type="text" name="firstname"/>
+
+        <label for="lastname">Last name</label>
+        <input type="text" name="lastname" />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" />
+
+        <label for="password">Password</label>
+        <input type="password" name="pass"/>
+
+        <label for="confirmpass">Confirm pass</label>
+        <input type="password" name="confirmpass"/>
+    </div>
+    <input type="submit" class="success button expanded" value="Update"/>
+</form>
+<a href="<?php echo App::config("url")?>" class="button expanded">Cancel</a>
